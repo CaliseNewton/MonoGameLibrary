@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Projects\\MonoGameLibrary\\MonoGameLibrary.csproj": {}
+    "C:\\Projects\\MonoGameLibrary\\MonoGameLibrary.csproj": {}
   },
   "projects": {
-    "c:\\Projects\\MonoGameLibrary\\MonoGameLibrary.csproj": {
+    "C:\\Projects\\MonoGameLibrary\\MonoGameLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Projects\\MonoGameLibrary\\MonoGameLibrary.csproj",
+        "projectUniqueName": "C:\\Projects\\MonoGameLibrary\\MonoGameLibrary.csproj",
         "projectName": "MonoGameLibrary",
-        "projectPath": "c:\\Projects\\MonoGameLibrary\\MonoGameLibrary.csproj",
+        "projectPath": "C:\\Projects\\MonoGameLibrary\\MonoGameLibrary.csproj",
         "packagesPath": "C:\\Users\\Calise\\.nuget\\packages\\",
-        "outputPath": "c:\\Projects\\MonoGameLibrary\\obj\\",
+        "outputPath": "C:\\Projects\\MonoGameLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Calise\\AppData\\Roaming\\NuGet\\NuGet.Config"
