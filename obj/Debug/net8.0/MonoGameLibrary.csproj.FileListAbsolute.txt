@@ -24,3 +24,16 @@ c:\Projects\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.dll
 c:\Projects\MonoGameLibrary\obj\Debug\net8.0\refint\MonoGameLibrary.dll
 c:\Projects\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.pdb
 c:\Projects\MonoGameLibrary\obj\Debug\net8.0\ref\MonoGameLibrary.dll
+c:\Projects\JustFishing\MonoGameLibrary\bin\Debug\net8.0\MonoGameLibrary.deps.json
+c:\Projects\JustFishing\MonoGameLibrary\bin\Debug\net8.0\MonoGameLibrary.dll
+c:\Projects\JustFishing\MonoGameLibrary\bin\Debug\net8.0\MonoGameLibrary.pdb
+c:\Projects\JustFishing\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.csproj.AssemblyReference.cache
+c:\Projects\JustFishing\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.GeneratedMSBuildEditorConfig.editorconfig
+c:\Projects\JustFishing\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.AssemblyInfoInputs.cache
+c:\Projects\JustFishing\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.AssemblyInfo.cs
+c:\Projects\JustFishing\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.csproj.CoreCompileInputs.cache
+c:\Projects\JustFishing\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.sourcelink.json
+c:\Projects\JustFishing\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.dll
+c:\Projects\JustFishing\MonoGameLibrary\obj\Debug\net8.0\refint\MonoGameLibrary.dll
+c:\Projects\JustFishing\MonoGameLibrary\obj\Debug\net8.0\MonoGameLibrary.pdb
+c:\Projects\JustFishing\MonoGameLibrary\obj\Debug\net8.0\ref\MonoGameLibrary.dll

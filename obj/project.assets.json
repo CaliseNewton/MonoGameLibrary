@@ -278,11 +278,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\MonoGameLibrary\\MonoGameLibrary.csproj",
+      "projectUniqueName": "C:\\Projects\\JustFishing\\MonoGameLibrary\\MonoGameLibrary.csproj",
       "projectName": "MonoGameLibrary",
-      "projectPath": "C:\\Projects\\MonoGameLibrary\\MonoGameLibrary.csproj",
+      "projectPath": "C:\\Projects\\JustFishing\\MonoGameLibrary\\MonoGameLibrary.csproj",
       "packagesPath": "C:\\Users\\Calise\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\MonoGameLibrary\\obj\\",
+      "outputPath": "C:\\Projects\\JustFishing\\MonoGameLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Calise\\AppData\\Roaming\\NuGet\\NuGet.Config"

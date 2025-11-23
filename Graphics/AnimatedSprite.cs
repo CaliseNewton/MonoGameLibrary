@@ -44,14 +44,35 @@ public class AnimatedSprite : Sprite
     {
         _elapsed += gameTime.ElapsedGameTime;
 
-        if (_elapsed >= _animation.Delay)
+        // if (_elapsed >= _animation.Delay)
+        // {
+        //     _elapsed -= _animation.Delay;
+        //     _currentFrame++;
+
+        //     // Loop the animation
+        //     if (_currentFrame >= _animation.Frames.Count && _animation.IsLooping == true)
+        //     {
+        //         _currentFrame = 0;
+        //     }
+
+        //     Region = _animation.Frames[_currentFrame];
+        // }
+        while (_elapsed >= _animation.Delay)
         {
             _elapsed -= _animation.Delay;
             _currentFrame++;
 
+            // Loop the animation
             if (_currentFrame >= _animation.Frames.Count)
             {
-                _currentFrame = 0;
+                if (_animation.IsLooping)
+                {
+                    _currentFrame = 0;
+                }
+                else
+                {
+                    _currentFrame = _animation.Frames.Count - 1; // Stay on the last frame
+                }
             }
 
             Region = _animation.Frames[_currentFrame];

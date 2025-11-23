@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\MonoGameLibrary\\MonoGameLibrary.csproj": {}
+    "c:\\Projects\\JustFishing\\MonoGameLibrary\\MonoGameLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\MonoGameLibrary\\MonoGameLibrary.csproj": {
+    "c:\\Projects\\JustFishing\\MonoGameLibrary\\MonoGameLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\MonoGameLibrary\\MonoGameLibrary.csproj",
+        "projectUniqueName": "c:\\Projects\\JustFishing\\MonoGameLibrary\\MonoGameLibrary.csproj",
         "projectName": "MonoGameLibrary",
-        "projectPath": "C:\\Projects\\MonoGameLibrary\\MonoGameLibrary.csproj",
+        "projectPath": "c:\\Projects\\JustFishing\\MonoGameLibrary\\MonoGameLibrary.csproj",
         "packagesPath": "C:\\Users\\Calise\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\MonoGameLibrary\\obj\\",
+        "outputPath": "c:\\Projects\\JustFishing\\MonoGameLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Calise\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -164,6 +164,8 @@ public class TextureAtlas
 
                         List<TextureRegion> frames = new List<TextureRegion>();
 
+                        bool isLooping = bool.Parse(animationElement.Attribute("isLooping")?.Value ?? "true");
+
                         var frameElements = animationElement.Elements("Frame");
 
                         if (frameElements != null)
@@ -176,7 +178,7 @@ public class TextureAtlas
                             }
                         }
 
-                        Animation animation = new Animation(frames, delay);
+                        Animation animation = new Animation(frames, delay, isLooping);
                         atlas.AddAnimation(name, animation);
                     }
                 }
