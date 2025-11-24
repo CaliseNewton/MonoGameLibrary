@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
 namespace MonoGameLibrary.Graphics;
@@ -7,33 +8,52 @@ public class AnimatedSprite : Sprite
 {
     private int _currentFrame;
     private TimeSpan _elapsed;
-    private Animation _animation;
+    private Animation _animation; //current animation
 
-    /// <summary>
-    /// Gets or Sets the animation for this animated sprite.
-    /// </summary>
-    public Animation Animation
+    private Dictionary<string, Animation> _animations = new();
+
+
+    private string _currentAnimationName;
+    public string CurrentAnimationName => _currentAnimationName;
+
+    public AnimatedSprite() { }
+
+    // construct with a single named animation
+    public AnimatedSprite(Animation animation, string name = "default")
     {
-        get => _animation;
-        set
+        if (animation != null)
         {
-            _animation = value;
-            Region = _animation.Frames[0];
+            AddAnimation(name, animation);
+            Play(name);
         }
     }
 
-    /// <summary>
-    /// Creates a new animated sprite.
-    /// </summary>
-    public AnimatedSprite() { }
-
-    /// <summary>
-    /// Creates a new animated sprite with the specified frames and delay.
-    /// </summary>
-    /// <param name="animation">The animation for this animated sprite.</param>
-    public AnimatedSprite(Animation animation)
+    // construct with a map of animations and start one
+    public AnimatedSprite(Dictionary<string, Animation> animations, string start = null)
     {
-        Animation = animation;
+        if (animations != null)
+        {
+            foreach (var kv in animations)
+                AddAnimation(kv.Key, kv.Value);
+
+            if (!string.IsNullOrEmpty(start) && _animations.ContainsKey(start))
+                Play(start);
+        }
+    }
+
+    // Add or replace an animation
+    public void AddAnimation(string name, Animation animation)
+    {
+        if (string.IsNullOrEmpty(name)) throw new ArgumentException("name");
+        if (animation == null) throw new ArgumentNullException(nameof(animation));
+
+        _animations[name] = animation;
+    }
+
+    public bool RemoveAnimation(string name)
+    {
+        if (string.IsNullOrEmpty(name)) return false;
+        return _animations.Remove(name);
     }
 
     /// <summary>
@@ -42,41 +62,49 @@ public class AnimatedSprite : Sprite
     /// <param name="gameTime">A snapshot of the game timing values provided by the framework.</param>
     public void Update(GameTime gameTime)
     {
+        if (_animation == null || _animation.Frames == null || _animation.Frames.Count == 0)
+            return;
+
         _elapsed += gameTime.ElapsedGameTime;
 
-        // if (_elapsed >= _animation.Delay)
-        // {
-        //     _elapsed -= _animation.Delay;
-        //     _currentFrame++;
-
-        //     // Loop the animation
-        //     if (_currentFrame >= _animation.Frames.Count && _animation.IsLooping == true)
-        //     {
-        //         _currentFrame = 0;
-        //     }
-
-        //     Region = _animation.Frames[_currentFrame];
-        // }
         while (_elapsed >= _animation.Delay)
         {
             _elapsed -= _animation.Delay;
             _currentFrame++;
 
-            // Loop the animation
             if (_currentFrame >= _animation.Frames.Count)
             {
                 if (_animation.IsLooping)
-                {
                     _currentFrame = 0;
-                }
                 else
-                {
-                    _currentFrame = _animation.Frames.Count - 1; // Stay on the last frame
-                }
+                    _currentFrame = _animation.Frames.Count - 1;
             }
 
             Region = _animation.Frames[_currentFrame];
         }
+    }
+
+    public void Play(Animation animation)
+    {
+        if (animation == null) throw new ArgumentNullException(nameof(animation));
+        _animation = animation;
+        _currentFrame = 0;
+        _elapsed = TimeSpan.Zero;
+
+        if (_animation.Frames != null && _animation.Frames.Count > 0)
+            Region = _animation.Frames[0];
+    }
+
+    public void Play(string name)
+    {
+        if (string.IsNullOrEmpty(name)) throw new ArgumentException("name");
+        if (!_animations.ContainsKey(name)) throw new KeyNotFoundException($"Animation '{name}' not found.");
+
+        // avoid resetting if the same animation is already playing
+        if (_currentAnimationName == name) return;
+
+        Play(_animations[name]);
+        _currentAnimationName = name;
     }
 
 }
